@@ -13,7 +13,7 @@ private:
 	void checkGrade(int grade);
 public:
 	Bureaucrat(std::string name, int grade);
-	~Bureaucrat(void);
+	virtual ~Bureaucrat(void);
 	std::string getName(void) const;
 	int getGrade(void) const;
 	Bureaucrat& operator=(const Bureaucrat & other);

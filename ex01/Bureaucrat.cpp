@@ -1,4 +1,5 @@
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 #include <iostream>
 
@@ -89,4 +90,13 @@ void Bureaucrat::checkGrade(int grade)
 	{
 		std::cout << e.what() << std::endl;
 	}
+}
+
+void Bureaucrat::signForm(Form & form) const
+{
+	if (form.getSignGrade() < this->grade)
+		std::cout << this->name << " couldn’t sign " <<  form.getName() << " the bureaucrat's grade is lower than required to be able to sign." << std::endl;
+	else
+		std::cout << this->name << " signed " << form.getName() << std::endl;
+	form.beSigned(*this);
 }

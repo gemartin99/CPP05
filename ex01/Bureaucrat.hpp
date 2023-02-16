@@ -1,6 +1,7 @@
 #ifndef BUREAUCRAT_HPP		
 # define BUREAUCRAT_HPP
 
+#include "Form.hpp"
 #include <string>
 #include <iostream>
 
@@ -22,17 +23,18 @@ public:
 	void decrementGrade(void);
 	void setName(std::string name);
 	void setGrade(int grade);
+	void signForm(Form & form) const;
 	class GradeTooHighException : public std::exception {
     public:
         virtual const char* what() const throw() {
-            return "Error: the grade is too high";
+            return "Error: the bureaucrat grade is too high";
         }
     };
 
     class GradeTooLowException : public std::exception {
     public:
         virtual const char* what() const throw() {
-            return "Error: the grade is too low";
+            return "Error: the bureaucrat grade is too low";
         }
     };
 };
