@@ -20,9 +20,9 @@ MID_GRAY =		\033[38;5;245m
 DARK_GREEN =	\033[38;2;75;179;82m
 DARK_YELLOW =	\033[38;5;143m
 
-SRCS = main.cpp Bureaucrat.cpp AForm.cpp PresidentalPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
+SRCS = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
 
-INCLUDE = Bureaucrat.hpp AForm.hpp PresidentalPardonForm.hpp RobotomyRequestForm.hpp ShrubberyCreationForm.hpp
+INCLUDE = Bureaucrat.hpp AForm.hpp PresidentialPardonForm.hpp RobotomyRequestForm.hpp ShrubberyCreationForm.hpp
 CC = c++
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD 

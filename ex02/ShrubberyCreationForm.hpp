@@ -1,7 +1,12 @@
-class ShrubberyCreationForm
+#ifndef SHRUBBERYCREATIONFORM_HPP
+#define SHRUBBERYCREATIONFORM_HPP
+
+class ShrubberyCreationForm : public AForm
 {
 public:
 	ShrubberyCreationForm();
 	~ShrubberyCreationForm();
 	
 };
+
+#endif;

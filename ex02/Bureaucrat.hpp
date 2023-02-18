@@ -1,10 +1,11 @@
 #ifndef BUREAUCRAT_HPP		
 # define BUREAUCRAT_HPP
 
-#include "Form.hpp"
+#include "AForm.hpp"
 #include <string>
 #include <iostream>
 
+class AForm;
 class Bureaucrat
 {
 private:
@@ -23,7 +24,7 @@ public:
 	void decrementGrade(void);
 	void setName(std::string name);
 	void setGrade(int grade);
-	void signForm(Form & form) const;
+	void signForm(AForm & form) const;
 	class GradeTooHighException : public std::exception {
     public:
         virtual const char* what() const throw() {
