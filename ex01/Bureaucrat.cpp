@@ -94,7 +94,7 @@ void Bureaucrat::checkGrade(int grade)
 
 void Bureaucrat::signForm(Form & form) const
 {
-	if (form.getSignGrade() < this->grade)
+	if (form.getSGrade() < this->grade)
 		std::cout << this->name << " couldn’t sign " <<  form.getName() << " the bureaucrat's grade is lower than required to be able to sign." << std::endl;
 	else
 		std::cout << this->name << " signed " << form.getName() << std::endl;

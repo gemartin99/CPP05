@@ -4,7 +4,7 @@
 #include "Bureaucrat.hpp"
 #include <string>
 #include <iostream>
-
+class Bureaucrat;
 class Form
 {
 private:
