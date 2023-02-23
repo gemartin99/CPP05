@@ -8,11 +8,7 @@ int main()
 	std::cout << a;
 	a.decrementGrade();
 	std::cout << a;
-	a.decrementGrade();
-	std::cout << a;
-	a.decrementGrade();
-	std::cout << a;
-	a.decrementGrade();
+	a.incrementGrade();
 	std::cout << a;
 	return (0);
 }
