@@ -25,6 +25,7 @@ public:
 	void setName(std::string name);
 	void setGrade(int grade);
 	void signForm(AForm & form) const;
+	void executeForm(AForm const & form) const;
 	class GradeTooHighException : public std::exception {
     public:
         virtual const char* what() const throw() {

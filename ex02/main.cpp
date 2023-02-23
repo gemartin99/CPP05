@@ -3,6 +3,7 @@
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "AForm.hpp"
+
 int	main(void)
 {
 	AForm			*form = NULL;
@@ -19,8 +20,8 @@ int	main(void)
 	try
 	{
 		form = new PresidentialPardonForm("28Z");
-		std::cout << "Siganture Gade: " << form->getSignGrade() << std::endl;
-		std::cout << "Execution Gade: " << form->getExecuteGrade() << std::endl;
+		std::cout << "Siganture Gade: " << form->getSGrade() << std::endl;
+		std::cout << "Execution Gade: " << form->getEGrade() << std::endl;
 		form->execute(bob);
 		delete form;
 		form = NULL;
@@ -70,8 +71,8 @@ int	main(void)
 	try
 	{
 		form = new RobotomyRequestForm("28Z");
-		std::cout << "Siganture Gade: " << form->getSignGrade() << std::endl;
-		std::cout << "Execution Gade: " << form->getExecuteGrade() << std::endl;
+		std::cout << "Siganture Gade: " << form->getSGrade() << std::endl;
+		std::cout << "Execution Gade: " << form->getEGrade() << std::endl;
 		form->execute(bob);
 		delete form;
 		form = NULL;
@@ -162,8 +163,8 @@ int	main(void)
 	try
 	{
 		form = new ShrubberyCreationForm("28Z");
-		std::cout << "Siganture Gade: " << form->getSignGrade() << std::endl;
-		std::cout << "Execution Gade: " << form->getExecuteGrade() << std::endl;
+		std::cout << "Siganture Gade: " << form->getSGrade() << std::endl;
+		std::cout << "Execution Gade: " << form->getEGrade() << std::endl;
 		form->execute(bob);
 		delete form;
 		form = NULL;
@@ -230,3 +231,41 @@ int	main(void)
 	// delete luc;
 	return (0);
 }
+
+
+/*int	main(void)
+{
+	Bureaucrat	b1("Juan", 1);
+	Bureaucrat	b2("Javier", 150);
+	ShrubberyCreationForm sf("Home");
+	RobotomyRequestForm rf("Man");
+	PresidentialPardonForm pf("Trump");
+	std::cout << b1 << std::endl;
+	std::cout << b2 << std::endl;
+	b1.incrementGrade();
+	std::cout << b1 << std::endl;
+	b2.decrementGrade();
+	std::cout << b2 << std::endl;
+	std::cout << "------Forms------------" << std::endl;
+	std::cout << "\n<|ShrubberyCreationForm|>\n" << std::endl;
+	std::cout << sf << std::endl;
+	sf.execute(b1);
+	std::cout << "------------------" << std::endl;
+	sf.beSigned(b1);
+	sf.execute(b2);
+	sf.execute(b1);
+	std::cout << "\n<|RobotomyRequestForm|>\n" << std::endl;
+	std::cout << rf << std::endl;
+	rf.execute(b1);
+	std::cout << "------------------" << std::endl;
+	rf.beSigned(b1);
+	rf.execute(b2);
+	rf.execute(b1);
+	std::cout << "\n<|PresidentialPardonForm|>\n" << std::endl;
+	std::cout << pf << std::endl;
+	pf.execute(b1);
+	std::cout << "------------------" << std::endl;
+	pf.beSigned(b1);
+	pf.execute(b2);
+	pf.execute(b1);
+}*/

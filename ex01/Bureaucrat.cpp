@@ -6,15 +6,9 @@
 Bureaucrat::Bureaucrat(std::string name, int grade): name(name)
 {
 	if (grade < 1)
-	{
-		this->grade = 1;
 		throw GradeTooHighException();
-	}
 	else if (grade > 150)
-	{
-		this->grade = 150;
 		throw GradeTooLowException();
-	}
 	this->grade = grade;
 	std::cout << "Bureaucrat default constructor called" << std::endl;
 }
@@ -77,19 +71,12 @@ void Bureaucrat::setGrade(int grade)
 
 void Bureaucrat::checkGrade(int grade)
 {
-	try
-	{
-		if (grade < 1)
-			throw GradeTooHighException();
-		else if (grade > 150)
-			throw GradeTooLowException();
-		else
-			setGrade(grade);
-	}
-	catch (std::exception & e)
-	{
-		std::cout << e.what() << std::endl;
-	}
+	if (grade < 1)
+		throw GradeTooHighException();
+	else if (grade > 150)
+		throw GradeTooLowException();
+	else
+		setGrade(grade);
 }
 
 void Bureaucrat::signForm(Form & form) const
